@@ -19,8 +19,8 @@ steps:
   - name: temporary-secrets
     path: /secrets
   # TODO @jseales - replace --dry-run on dart command with --force
-  # TODO add     dart pub get
   script: | 
+    dart pub get
     cat /secrets/temporary-pub-token.txt | dart pub token add https://pub.dev
     dart pub publish --dry-run
   dir: script/tool
