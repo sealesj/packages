@@ -14,7 +14,7 @@ steps:
   env:
   - PROJECT_ID=$PROJECT_ID
 - id: Publish to pub.dev
-  name: dart
+  name: dart:stable
   volumes:
   - name: temporary-secrets
     path: /secrets
